@@ -1,14 +1,21 @@
 /*
-Funções utlizadas nesse arquivo:
+Funções nesse arquivo
 - init
 - initRadio
+- radioChange
 - initCheckbox
 - checkboxChange
 - initSelect
 - selectChange
 - initFile
+- fileChange
 
+
+Opções do plugin
+- setStyle
+- theme
 */
+
 ;(function( window, document, $, undefined ) {
 
 	// Create the defaults once
@@ -39,6 +46,8 @@ Funções utlizadas nesse arquivo:
 
 			var $el = $( this.element ),
 				settings = this.settings,
+
+				// Usar algum tema?
 				theme = ! settings.theme ? '' : ' theme-' + settings.theme,
 
 				div_wrap = '<div class="sexyforms' + theme + '" />',
@@ -53,7 +62,7 @@ Funções utlizadas nesse arquivo:
 					margin : $el.css( 'margin' ),
 
 					// Posicionamento
-					position : $el.css( 'position' ) === 'static' ? 'relative' : 'absolute',
+					position : 'static' === $el.css( 'position' ) ? 'relative' : $el.css( 'position' ),
 					bottom   : $el.css( 'bottom' ),
 					left     : $el.css( 'left' ),
 					right    : $el.css( 'right' ),
@@ -69,7 +78,10 @@ Funções utlizadas nesse arquivo:
 					margin: 0,
 					position: 'absolute',
 					top: 0
-				};
+				},
+
+				// Função que será executada dependendo do elemento
+				functionExec;
 
 
 
@@ -80,22 +92,31 @@ Funções utlizadas nesse arquivo:
 
 
 
-			// Verificar o tipo do elemento e chamar a função que inicia a personalização
+			// Verificar o tipo do elemento, chamar a função que inicia a personalização
+			// e os eventos para cada elemento
 			if( $el.is( 'input:radio' ) ) {
 				this.initRadio( $container_sexyforms );
+				functionExec = this.radioChange;
 			}
 
 			if( $el.is( 'input:checkbox' ) ) {
 				this.initCheckbox( $container_sexyforms );
+				functionExec = this.checkboxChange;
 			}
 
 			if( $el.is( 'select' ) ) {
 				this.initSelect( $container_sexyforms );
+				functionExec = this.selectChange;
 			}
 
 			if( $el.is( 'file' ) ) {
 				this.initFile( $container_sexyforms );
+				functionExec = this.fileChange;
 			}
+
+
+			// Evento change
+			$el.on( 'change', functionExec );
 
 		}, // init
 
@@ -113,15 +134,55 @@ Funções utlizadas nesse arquivo:
 		 * @name: initRadio
 		 * @description: Inicia estilização para radio button
 		 *
-		 * @param {jQuery Object} $el Objeto jQuery do input radio
+		 * @param {jQuery Object} $ctn Objeto jQuery do container do input radio
 		 *
 		 *-------------------------------------------------------------------------------------*/
-		initRadio : function( $el ) {
+		initRadio : function( $ctn ) {
 
-			console.log( 'Radio', $el );
-			$el.addClass( 'sf-radio' );
+			var checked = $ctn.find( 'input' ).is( ':checked' );
+			$ctn.addClass( 'sf-radio' );
+
+			// Se o radio estiver checkado, trazer ele checado no carregamento
+			if( checked ) {
+				$ctn.addClass( 'sf-checked' );
+			}
 
 		}, // initRadio
+
+
+
+
+
+
+
+
+
+
+		/*--------------------------------------------------------------------------------------
+		 *
+		 * @name: radioChange
+		 * @description: Quando o radio recebe o evento change
+		 *
+		 * @param {Object} e Dados do evento change
+		 *
+		 *-------------------------------------------------------------------------------------*/
+		radioChange : function( e ) {
+
+			e.preventDefault();
+
+			var $this = $( this ),
+				this_id = $this[0].id,
+				radio_name = $this[0].name;
+
+			$( 'input[name="' + radio_name + '"]' ) // Todos os radio
+				.not( '#' + this_id ) // Menos o clicado
+				.closest( 'div.sf-radio' ) // Volta até a div container
+				.removeClass( 'sf-checked' ); // e remove a classe sf-checked
+
+			// Inclui a classe sf-checked na div do radio clicado
+			$this.closest( 'div.sf-radio' ).addClass( 'sf-checked' );
+
+		}, // radioChange
 
 
 
@@ -137,14 +198,18 @@ Funções utlizadas nesse arquivo:
 		 * @name: initCheckbox
 		 * @description: Inicia estilização para checkbox button
 		 *
-		 * @param {jQuery Object} $el Objeto jQuery do input checkbox
+		 * @param {jQuery Object} $ctn Objeto jQuery do container do input checkbox
 		 *
 		 *-------------------------------------------------------------------------------------*/
-		initCheckbox : function( $el ) {
+		initCheckbox : function( $ctn ) {
 
-			$el.addClass( 'sf-checkbox' );
+			var checked = $ctn.find( 'input' ).is( ':checked' );
+			$ctn.addClass( 'sf-checkbox' );
 
-			$el.find( 'input' ).on( 'change', this.checkboxChange );
+			// Se o checkbox estiver checkado, trazer ele checado no carregamento
+			if( checked ) {
+				$ctn.addClass( 'sf-checked' );
+			}
 
 		}, // initCheckbox
 
@@ -167,9 +232,11 @@ Funções utlizadas nesse arquivo:
 		 *-------------------------------------------------------------------------------------*/
 		checkboxChange : function( e ) {
 
+			e.preventDefault();
+
 			var $this = $( this ),
 				$sf_checkbox = $this.closest( 'div.sf-checkbox' ),
-				checked = $this.find( 'input' ).is( ':checked' );
+				checked = $this.is( ':checked' );
 
 			if( checked ) {
 				$sf_checkbox.addClass( 'sf-checked' );
@@ -194,15 +261,13 @@ Funções utlizadas nesse arquivo:
 		 * @name: initSelect
 		 * @description: Inicia estilização para select box
 		 *
-		 * @param {jQuery Object} $el Objeto jQuery do select
+		 * @param {jQuery Object} $ctn Objeto jQuery do container do select
 		 *
 		 *-------------------------------------------------------------------------------------*/
-		initSelect : function( $el ) {
+		initSelect : function( $ctn ) {
 
-			var selected = $el.find( 'option:selected' ).text();
-			$el.addClass( 'sf-select' ).append( '<span>' + selected + '</span>' );
-
-			$el.find( 'select' ).on( 'change', this.selectChange );
+			var selected = $ctn.find( 'option:selected' ).text();
+			$ctn.addClass( 'sf-select' ).append( '<span>' + selected + '</span>' );
 
 		}, // initSelect
 
@@ -247,15 +312,39 @@ Funções utlizadas nesse arquivo:
 		 * @name: initFile
 		 * @description: Inicia estilização para select box
 		 *
+		 * @param {jQuery Object} $ctn Objeto jQuery do container do input file
+		 *
+		 *-------------------------------------------------------------------------------------*/
+		initFile : function( $ctn ) {
+
+			console.log( 'File', $ctn );
+			$ctn.addClass( 'sf-file' );
+
+		}, // initFile
+
+
+
+
+
+
+
+
+
+
+		/*--------------------------------------------------------------------------------------
+		 *
+		 * @name: fileChange
+		 * @description: Quando o input file recebe o evento change
+		 *
 		 * @param {jQuery Object} $el Objeto jQuery do select
 		 *
 		 *-------------------------------------------------------------------------------------*/
-		initFile : function( $el ) {
+		fileChange : function( $el ) {
 
 			console.log( 'File', $el );
 			$el.addClass( 'sf-file' );
 
-		} // initFile
+		} // fileChange
 	};
 
 
@@ -267,8 +356,7 @@ Funções utlizadas nesse arquivo:
 
 
 
-	// A really lightweight plugin wrapper around the constructor,
-	// preventing against multiple instantiations
+
 	$.fn[ pluginName ] = function ( options ) {
 		return this.each(function() {
 			if ( !$.data( this, "plugin_" + pluginName ) ) {
