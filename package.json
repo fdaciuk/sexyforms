@@ -6,10 +6,10 @@
 	"keywords" : [],
 	"author" : {
 		"name" : "Fernando Daciuk",
-		"url" : "http:da2k.com.br"
+		"url" : "https://github.com/fdaciuk"
 	},
 	"licenses" : [],
-    "homepage": "https://sexyforms.github.io",
+    "homepage": "http://fdaciuk.github.io/sexyforms",
     "docs": "https://github.com/fdaciuk/sexyforms#sexyforms",
     "download": "https://github.com/fdaciuk/sexyforms/archive/master.zip",
     "bugs": "https://github.com/fdaciuk/sexyforms/issues",
