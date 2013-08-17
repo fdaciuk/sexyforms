@@ -1,0 +1,4 @@
+.DS_Store
+__MACOSX/*
+.sass-cache/*
+node_modules/*
