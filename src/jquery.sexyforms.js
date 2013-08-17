@@ -14,6 +14,7 @@ Funções nesse arquivo
 Opções do plugin
 - setStyle
 - theme
+- wrap
 */
 
 ;(function( window, document, $, undefined ) {
@@ -49,7 +50,7 @@ Opções do plugin
 				settings = this.settings,
 
 				// Usar algum tema?
-				theme = ! settings.theme ? '' : ' theme-' + settings.theme,
+				theme = ! settings.theme ? '' : ' sf-theme-' + settings.theme,
 
 				container_wrap = '<' + settings.wrap + ' class="sexyforms' + theme + '" />',
 

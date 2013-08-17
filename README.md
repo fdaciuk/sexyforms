@@ -31,6 +31,76 @@ $( 'select', 'input:radio', 'input:checkbox', 'input:file' ).sexyforms();
 ```
 
 
+## Configuração padrão do plugin
+
+Em sua configuração padrão, o plugin:
+* insere uma div _(wrapper)_ ao redor do elemento com a classe `sexyforms`;
+* pega o exato posicionamento do elemento e aplica ao wrapper;
+* usa o tema `default` para estilizar os campos, inserindo a classe `sf-theme-default` no wrapper.
+
+Na wrapper, para cada campo em específico, é adicionada uma classe `sf-tipodoelemento` (`sf-select, sf-radio, sf-checkbox` e `sf-file`).
+
+Para `select`, é criado o wrapper e um `<span>`, que vai receber o texto do `option` selecionado:
+
+```html
+<div class="sexyforms sf-select sf-theme-default">
+    <select>
+        <option value="" selected="selected">Selecione a opção</option>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+    </select>
+    <span>Selecione a opção</span>
+</div>
+```
+
+Quando o `checkbox` ou `radio` está checado, o wrapper recebe a classe `sf-checked`.
+
+Quando o campo recebe o foco (`focus`), o wrapper recebe a classe `sf-focus`.
+
+
+
+## Opções do plugin
+
+Para setar suas opções para o plugin, passe para a função um objeto Javascript:
+
+```javascript
+$( 'input:radio, input:checkbox, select, input:file' ).sexyforms({
+    setStyle : false,
+    theme : 'meu-tema'
+});
+```
+
+### setStyle {boolean}
+
+Verifica se o plugin deve aplicar a estilização para posicionamento do elemento no wrapper.
+
+Padrão: `true`
+
+
+### wrap {string}
+
+Nome da tag que será usada como wrapper do elemento.
+
+Padrão: `div`
+
+
+### theme {string|false}
+
+Verifica se o plugin deve usar um tema ou não. Para não usar tema algum, passe esse atributo como `false`. Para utilizar um tema próprio, somente passe o nome do tema, que será incluída a classe `sf-theme-seutema` no wrapper do elemento.
+
+Ex:
+
+```javascript
+$( 'input:radio, input:checkbox, select, input:file' ).sexyforms({
+    theme : 'meu-tema'
+});
+```
+
+Isso irá incluir a classe `sf-theme-meu-tema` no wrapper dos selects e inputs radio, checkbox e file.
+
+Padrão: `default`
+
+
 
 ## Posso ajudar a melhorar o Sexyforms?
 
@@ -48,6 +118,7 @@ $( 'select', 'input:radio', 'input:checkbox', 'input:file' ).sexyforms();
 
 * Programar para input file
 * Tema default para input file
+* Ao receber o foco, incluir a classe `sf-focus`
 
 ## Créditos
 
