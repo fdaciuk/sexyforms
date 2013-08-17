@@ -8,8 +8,6 @@ Sexyforms é uma forma simples e poderosa para estilizar campos de formulário q
 
 ## Instalação
 
-Simplesmente chame a biblioteca jQuery seguida do sexyforms (antes do fechamento da tag `</body>`):
-
 1. Inclua o jQuery:
 
     ```html
@@ -46,9 +44,10 @@ $( 'select', 'input:radio', 'input:checkbox', 'input:file' ).sexyforms();
 
 [Fernando Daciuk](https://github.com/fdaciuk)
 
-## Histórico
+## Todo
 
-TODO: Write history
+* Programar para input file
+* Tema default para input file
 
 ## Créditos
 
