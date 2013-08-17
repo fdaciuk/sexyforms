@@ -15,6 +15,14 @@
 			top: 0;
 		}
 	</style>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://rawgithub.com/fdaciuk/sexyforms/master/dist/js/jquery.sexyforms.min.js"></script>
+	<script>
+		$(function() {
+			$( 'input:radio, input:checkbox, select, input:file' ).sexyforms();
+		});
+	</script>
 </head>
 <body>
 <div id="wrap">
@@ -82,13 +90,5 @@
 		<p class="text-muted credit">jQuery Sexyforms por <a href="http://da2k.com.br">Fernando Daciuk.</p>
 	</div>
 </div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://rawgithub.com/fdaciuk/sexyforms/master/dist/js/jquery.sexyforms.min.js"></script>
-<script>
-	$(function() {
-		$( 'input:radio, input:checkbox, select, input:file' ).sexyforms();
-	});
-</script>
 </body>
 </html>
