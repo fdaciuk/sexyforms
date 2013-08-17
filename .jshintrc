@@ -13,6 +13,6 @@
   "globals" : {
     "document" : true,
     "window" : true,
-    "jQuery" : trues
+    "jQuery" : true
   }
 }

@@ -26,7 +26,7 @@ module.exports = function( grunt ) {
 
 			js : {
 				files : {
-					'src/jquery.sexyforms.js' : 'dist/jquery.sexyforms.min.js'
+					'dist/js/jquery.sexyforms.min.js' : 'src/jquery.sexyforms.js'
 				}
 			}
 		}, // uglify
