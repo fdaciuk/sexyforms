@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Example Sexyforms</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="../dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../dist/css/sticky-footer.css" />
+	<link rel="stylesheet" href="../dist/themes/sf-theme-default.css" />
+</head>
+<body>
+<div id="wrap">
+	<div class="container">
+		<header class="page-header">
+			<h1>jQuery Sexyforms</h1>
+			<p class="lead">Crie belos formulários para o seu website.</p>
+			<p>Veja a <a href="https://github.com/fdaciuk/sexyforms#sexyforms">documentação aqui.</a></p>
+		</header>
+
+
+		<h3>Exemplos</h3>
+
+		<div class="well">
+			<form role="form">
+				<div class="form-group">
+					<label for="email">E-mail:</label>
+					<input type="email" class="form-control" id="email" placeholder="Seu e-mail" />
+				</div>
+				<div class="form-group">
+					<label for="password">Senha:</label>
+					<input type="password" class="form-control" id="password" placeholder="Sua senha" />
+				</div>
+				<div class="form-group">
+					<input type="file" id="exampleInputFile" />
+					<p class="help-block">Selecione um arquivo para fazer o upload.</p>
+				</div>
+				<div class="form-group">
+					<select name="" id="" class="form-control">
+						<option value="">Selecione sua cidade</option>
+						<option value="">Cidade 1</option>
+						<option value="">Cidade 2</option>
+						<option value="">Cidade 3</option>
+						<option value="">Cidade 4</option>
+					</select>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						Masculino
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						Feminino
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+					<input type="checkbox" /> Aceito os termos
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default" />Submit</button>
+			</form>
+		</div> <!-- .well -->
+	</div>
+</div> <!-- .wrap -->
+
+
+<div id="footer">
+	<div class="container">
+		<p class="text-muted credit">jQuery Sexyforms por <a href="http://da2k.com.br">Fernando Daciuk.</p>
+	</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../dist/js/jquery.sexyforms.min.js"></script>
+<script>
+	$(function() {
+		$( 'input:radio, input:checkbox, select, input:file' ).sexyforms();
+	});
+</script>
+</body>
+</html>

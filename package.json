@@ -1,0 +1,28 @@
+{
+	"name" : "sexyforms",
+	"title" : "jQuery Sexyforms",
+	"version" : "0.0.1",
+	"description" : "jQuery plugin to style form fields: select, radio, checkbox and file.",
+	"keywords" : [],
+	"author" : {
+		"name" : "Fernando Daciuk",
+		"url" : "http:da2k.com.br"
+	},
+	"licenses" : [],
+    "homepage": "https://sexyforms.github.io",
+    "docs": "https://github.com/fdaciuk/sexyforms#sexyforms",
+    "download": "https://github.com/fdaciuk/sexyforms/archive/master.zip",
+    "bugs": "https://github.com/fdaciuk/sexyforms/issues",
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-uglify": "~0.2.2",
+		"grunt-contrib-watch": "~0.4.4",
+		"grunt-notify": "~0.2.4",
+		"grunt-contrib-compass": "~0.2.0",
+		"grunt-contrib-jshint": "~0.6.0",
+		"matchdep": "~0.1.2"
+	}
+}

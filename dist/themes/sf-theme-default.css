@@ -1,0 +1,80 @@
+/* line 3, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default {
+  display: inline-block;
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* line 11, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-select {
+  background: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 35px;
+}
+/* line 17, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-select:before {
+  border: 5px solid transparent;
+  border-top-color: #cccccc;
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  z-index: 0;
+}
+/* line 26, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-select select {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+/* line 33, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-select span {
+  color: #7f8b8d;
+  font-size: 14px;
+  left: 14px;
+  line-height: 34px;
+  padding-right: 14px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+/* line 46, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-checkbox, .sexyforms.theme-default.sf-radio {
+  background: white;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  color: #7f8b8d;
+}
+/* line 53, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-checkbox.sf-checked:before, .sexyforms.theme-default.sf-radio.sf-checked:before {
+  left: 0;
+  line-height: 0;
+  position: absolute;
+  top: 3px;
+}
+/* line 59, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-checkbox input, .sexyforms.theme-default.sf-radio input {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+/* line 70, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-checkbox.sf-checked:before {
+  content: "\2714";
+  font-size: 20px;
+}
+/* line 77, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-radio {
+  border-radius: 12px;
+}
+/* line 80, ../../themes/sf-theme-default.sass */
+.sexyforms.theme-default.sf-radio.sf-checked:before {
+  content: "\2022";
+  font-size: 30px;
+  left: 0;
+  top: 6px;
+}
