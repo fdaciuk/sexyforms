@@ -21,8 +21,9 @@ Opções do plugin
 	// Create the defaults once
 	var pluginName = 'sexyforms',
 	defaults = {
-		setStyle: true, // float, margin, position, bottom, left, right, top, height, width
-		theme    : 'default' // default, false
+		setStyle : true, // float, margin, position, bottom, left, right, top, height, width
+		theme    : 'default', // default, false,
+		wrap     : 'div' // Elemento html que vai envolver os itens de formulário
 	};
 
 	// The actual plugin constructor
@@ -50,10 +51,10 @@ Opções do plugin
 				// Usar algum tema?
 				theme = ! settings.theme ? '' : ' theme-' + settings.theme,
 
-				div_wrap = '<div class="sexyforms' + theme + '" />',
+				container_wrap = '<' + settings.wrap + ' class="sexyforms' + theme + '" />',
 
 				// Incluir o container ao redor do elemento
-				$container_sexyforms = $el.wrap( div_wrap ).closest( 'div.sexyforms' ),
+				$container_sexyforms = $el.wrap( container_wrap ).closest( '.sexyforms' ),
 
 				// Pega informações de posicionamento do elemento
 				style = {
@@ -176,11 +177,11 @@ Opções do plugin
 
 			$( 'input[name="' + radio_name + '"]' ) // Todos os radio
 				.not( '#' + this_id ) // Menos o clicado
-				.closest( 'div.sf-radio' ) // Volta até a div container
+				.closest( '.sf-radio' ) // Volta até ao container
 				.removeClass( 'sf-checked' ); // e remove a classe sf-checked
 
-			// Inclui a classe sf-checked na div do radio clicado
-			$this.closest( 'div.sf-radio' ).addClass( 'sf-checked' );
+			// Inclui a classe sf-checked no container do radio clicado
+			$this.closest( '.sf-radio' ).addClass( 'sf-checked' );
 
 		}, // radioChange
 
@@ -235,7 +236,7 @@ Opções do plugin
 			e.preventDefault();
 
 			var $this = $( this ),
-				$sf_checkbox = $this.closest( 'div.sf-checkbox' ),
+				$sf_checkbox = $this.closest( '.sf-checkbox' ),
 				checked = $this.is( ':checked' );
 
 			if( checked ) {
@@ -291,7 +292,7 @@ Opções do plugin
 		selectChange : function( e ) {
 
 			var $this = $( this ),
-				$sf_select = $this.closest( 'div.sf-select' ),
+				$sf_select = $this.closest( '.sf-select' ),
 				selected = $this.find( 'option:selected' ).text();
 
 			$sf_select.find( 'span' ).text( selected );
