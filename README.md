@@ -27,7 +27,7 @@ Sexyforms é uma forma simples e poderosa para estilizar campos de formulário q
 Faça a chamada dos elementos que você quer que recebam a estilização:
 
 ```javascript
-$( 'select', 'input:radio', 'input:checkbox', 'input:file' ).sexyforms();
+$( 'select, input:radio, input:checkbox, input:file' ).sexyforms();
 ```
 
 
