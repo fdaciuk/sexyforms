@@ -6,33 +6,52 @@ Sexyforms é uma forma simples e poderosa para estilizar campos de formulário q
 
 ## Instalação
 
-Simplesmente chame a biblioteca jQuery seguida do sexyforms:
-```html
-<script src="jquery.js"></script>
-<script src="jquery.sexyforms.js"></script>
+Simplesmente chame a biblioteca jQuery seguida do sexyforms (antes do fechamento da tag `</body>`):
+
+1. Inclua o jQuery:
+
+    ```html
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    ```
+
+
+2. Inclua o código do plugin:
+
+    ```html
+    <script src="dist/jquery.sexyforms.min.js"></script>
+    ```
+    
+
+## Como usar
+
+Faça a chamada dos elementos que você quer que recebam a estilização:
+
+```javascript
+$( 'select', 'input:radio', 'input:checkbox', 'input:file' ).sexyforms();
 ```
 
 
-## Usage
 
-TODO: Write usage instructions
+## Posso ajudar a melhorar o Sexyforms?
 
-## Contributing
+1. Dê um Fork no projeto!
+2. Crie uma nova branch: `git checkout -b my-new-feature`
+3. Comite suas alterações: `git commit -am 'Add some feature'`
+4. Envie as alterações para a sua brach: `git push origin my-new-feature`
+5. Submeta um Pull Request :D
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## Autor
 
-## History
+[Fernando Daciuk](https://github.com/fdaciuk)
+
+## Histórico
 
 TODO: Write history
 
-## Credits
+## Créditos
 
-TODO: Write credits
+Plugin criado utilizando o [jQuery Boilerplate](https://github.com/jquery-boilerplate/jquery-boilerplate)
 
-## License
+## Licença
 
-TODO: Write license
+[MIT License](https://github.com/fdaciuk/sexyforms/MIT-LICENSE.md)
