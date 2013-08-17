@@ -2,27 +2,16 @@
 
 Dê um belo estilo aos seus formulários com muita simplicidade e poder de personalização!
 
----
-
-## Documentação
-
 Sexyforms é uma forma simples e poderosa para estilizar campos de formulário que são praticamente impossíveis de se fazer apenas com CSS (e manter o cross-browser).
 
-Para utilizá-lo, você vai precisar primeiramente do jQuery.
+## Instalação
 
-E então, chame o JS do Sexyforms no seu código:
+Simplesmente chame a biblioteca jQuery seguida do sexyforms:
+```html
+<script src="jquery.js"></script>
+<script src="jquery.sexyforms.js"></script>
+```
 
-Para utilizar o tema padrão, chame o seguinte arquivo CSS no seu <head>:
-
-
-
-# Project Name
-
-TODO: Write a project description
-
-## Installation
-
-TODO: Describe the installation process
 
 ## Usage
 

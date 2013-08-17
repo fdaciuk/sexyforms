@@ -65,6 +65,7 @@ Opções do plugin
 					// Posicionamento
 					position : 'static' === $el.css( 'position' ) ? 'relative' : $el.css( 'position' ),
 					bottom   : $el.css( 'bottom' ),
+					display  : $el.css( 'display' ),
 					left     : $el.css( 'left' ),
 					right    : $el.css( 'right' ),
 					top      : $el.css( 'top' ),
@@ -110,7 +111,7 @@ Opções do plugin
 				functionExec = this.selectChange;
 			}
 
-			if( $el.is( 'file' ) ) {
+			if( $el.is( 'input:file' ) ) {
 				this.initFile( $container_sexyforms );
 				functionExec = this.fileChange;
 			}
