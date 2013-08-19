@@ -64,10 +64,10 @@ Opções do plugin
 					margin : $el.css( 'margin' ),
 
 					// Posicionamento
-					position : 'static' === $el.css( 'position' ) ? 'relative' : $el.css( 'position' ),
 					bottom   : $el.css( 'bottom' ),
-					display  : $el.css( 'display' ),
+					display  : 'inline' === $el.css( 'display' ) ? 'inline-block' : $el.css( 'display' ),
 					left     : $el.css( 'left' ),
+					position : 'static' === $el.css( 'position' ) ? 'relative' : $el.css( 'position' ),
 					right    : $el.css( 'right' ),
 					top      : $el.css( 'top' ),
 
