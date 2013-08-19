@@ -57,6 +57,8 @@ Quando o `checkbox` ou `radio` está checado, o wrapper recebe a classe `sf-chec
 
 Quando o campo recebe o foco (`focus`), o wrapper recebe a classe `sf-focus`.
 
+Quando o campo está desabilitado, o wrapper recebe a classe `sf-disabled`.
+
 
 
 ## Opções do plugin
@@ -114,11 +116,12 @@ Padrão: `default`
 
 [Fernando Daciuk](https://github.com/fdaciuk)
 
-## Todo
+## A Fazer (todo)
 
 * Programar para input file
 * Tema default para input file
 * Ao receber o foco, incluir a classe `sf-focus`
+* Campos desabilitados, incluir a classe `sf-disabled`
 
 ## Créditos
 
@@ -127,3 +130,7 @@ Plugin criado utilizando o [jQuery Boilerplate](https://github.com/jquery-boiler
 ## Licença
 
 [MIT License](https://github.com/fdaciuk/sexyforms/MIT-LICENSE.md)
+
+## Changelog
+
+[Changelog aqui](https://github.com/fdaciuk/sexyforms/CHANGELOG.md)
