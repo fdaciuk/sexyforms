@@ -118,10 +118,10 @@ Padrão: `default`
 
 ## A Fazer (todo)
 
-* Programar para input file
-* Tema default para input file
-* Ao receber o foco, incluir a classe `sf-focus`
-* Campos desabilitados, incluir a classe `sf-disabled`
+> * Programar para input file
+> * Tema default para input file
+> * Ao receber o foco, incluir a classe `sf-focus`
+> * Campos desabilitados, incluir a classe `sf-disabled`
 
 ## Créditos
 
@@ -129,8 +129,8 @@ Plugin criado utilizando o [jQuery Boilerplate](https://github.com/jquery-boiler
 
 ## Licença
 
-[MIT License](https://github.com/fdaciuk/sexyforms/MIT-LICENSE.md)
+[MIT License](https://github.com/fdaciuk/sexyforms/blob/master/MIT-LICENSE.md)
 
 ## Changelog
 
-[Changelog aqui](https://github.com/fdaciuk/sexyforms/CHANGELOG.md)
+[Changelog aqui](https://github.com/fdaciuk/sexyforms/blob/master/CHANGELOG.md)
