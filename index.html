@@ -28,22 +28,11 @@
 
 		<h3>Exemplos</h3>
 
-		<div class="well">
-			<form role="form">
+		<form role="form">
+			<div class="well">
 				<div class="form-group">
-					<label for="email">E-mail:</label>
-					<input type="email" class="form-control" id="email" placeholder="Seu e-mail" />
-				</div>
-				<div class="form-group">
-					<label for="password">Senha:</label>
-					<input type="password" class="form-control" id="password" placeholder="Sua senha" />
-				</div>
-				<div class="form-group">
-					<input type="file" id="exampleInputFile" />
-					<p class="help-block">Selecione um arquivo para fazer o upload.</p>
-				</div>
-				<div class="form-group">
-					<select name="" id="" class="form-control">
+					<label for="select">Modelo para select:</label>
+					<select name="select" id="select" class="form-control">
 						<option value="">Selecione sua cidade</option>
 						<option value="">Cidade 1</option>
 						<option value="">Cidade 2</option>
@@ -51,26 +40,55 @@
 						<option value="">Cidade 4</option>
 					</select>
 				</div>
-				<div class="radio">
-					<label>
-						<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-						Masculino
-					</label>
+			</div> <!-- .well -->
+
+
+			<div class="well">
+				<div class="form-group">
+					<label for="radio">Modelos para input radio e checkbox:</label>
+
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							Masculino
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							Feminino
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" /> Opção 1
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" /> Opção 2
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" /> Opção 3
+						</label>
+					</div>
 				</div>
-				<div class="radio">
-					<label>
-						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-						Feminino
-					</label>
+			</div> <!-- .well -->
+
+
+			<div class="well">
+				<div class="form-group">
+					<label for="file">Modelo para input file:</label>
+					<input type="file" id="file" />
+					<p class="help-block">Selecione um arquivo para fazer o upload.</p>
 				</div>
-				<div class="checkbox">
-					<label>
-					<input type="checkbox" /> Aceito os termos
-					</label>
-				</div>
-				<button type="submit" class="btn btn-default" />Submit</button>
-			</form>
-		</div> <!-- .well -->
+			</div> <!-- .well -->
+
+		</form>
 	</div>
 </div> <!-- .wrap -->
 
