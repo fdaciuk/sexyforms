@@ -174,11 +174,10 @@ Opções do plugin
 			e.preventDefault();
 
 			var $this = $( this ),
-				this_id = $this[0].id,
 				radio_name = $this[0].name;
 
 			$( 'input[name="' + radio_name + '"]' ) // Todos os radio
-				.not( '#' + this_id ) // Menos o clicado
+				.not( this ) // Menos o clicado
 				.closest( '.sf-radio' ) // Volta até ao container
 				.removeClass( 'sf-checked' ); // e remove a classe sf-checked
 
