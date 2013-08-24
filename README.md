@@ -120,7 +120,6 @@ Padrão: `default`
 
 > * Programar para input file
 > * Tema default para input file
-> * Ao receber o foco, incluir a classe `sf-focus`
 > * Campos desabilitados, incluir a classe `sf-disabled`
 > * Método `sf_update()` para quando o campo de formulário for atualizado dinamicamente
 > * Método `sf_remove()` para remover o sexyforms
