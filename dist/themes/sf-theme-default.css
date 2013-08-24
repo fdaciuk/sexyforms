@@ -1,18 +1,18 @@
 /* line 3, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default {
+  background: white;
+  border: 1px solid #cccccc;
   display: inline-block;
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 8, ../../themes/sf-theme-default.sass */
+/* line 10, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-focus {
   border-color: #66afe9;
   box-shadow: 0 0 8px #5eacd8;
 }
-/* line 15, ../../themes/sf-theme-default.sass */
+/* line 17, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-select {
-  background: white;
-  border: 1px solid #cccccc;
   border-radius: 4px;
   height: 35px;
 }
@@ -47,19 +47,17 @@
 }
 /* line 50, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox, .sexyforms.sf-theme-default.sf-radio {
-  background: white;
-  border: 1px solid #cccccc;
   border-radius: 3px;
   color: #7f8b8d;
 }
-/* line 57, ../../themes/sf-theme-default.sass */
+/* line 55, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox.sf-checked:before, .sexyforms.sf-theme-default.sf-radio.sf-checked:before {
   left: 0;
   line-height: 0;
   position: absolute;
   top: 3px;
 }
-/* line 63, ../../themes/sf-theme-default.sass */
+/* line 61, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox input, .sexyforms.sf-theme-default.sf-radio input {
   left: 0;
   opacity: 0;
@@ -67,16 +65,16 @@
   top: 0;
   z-index: 1;
 }
-/* line 74, ../../themes/sf-theme-default.sass */
+/* line 72, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox.sf-checked:before {
   content: "\2714";
   font-size: 20px;
 }
-/* line 81, ../../themes/sf-theme-default.sass */
+/* line 79, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-radio {
   border-radius: 12px;
 }
-/* line 84, ../../themes/sf-theme-default.sass */
+/* line 82, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-radio.sf-checked:before {
   content: "\2022";
   font-size: 30px;
