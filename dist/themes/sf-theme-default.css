@@ -4,14 +4,18 @@
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 11, ../../themes/sf-theme-default.sass */
+/* line 8, ../../themes/sf-theme-default.sass */
+.sexyforms.sf-theme-default.sf-focus {
+  box-shadow: 0 0 2px #0080c7;
+}
+/* line 14, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-select {
   background: white;
   border: 1px solid #cccccc;
   border-radius: 4px;
   height: 35px;
 }
-/* line 17, ../../themes/sf-theme-default.sass */
+/* line 20, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-select:before {
   border: 5px solid transparent;
   border-top-color: #cccccc;
@@ -21,7 +25,7 @@
   top: 13px;
   z-index: 0;
 }
-/* line 26, ../../themes/sf-theme-default.sass */
+/* line 29, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-select select {
   left: 0;
   opacity: 0;
@@ -29,7 +33,7 @@
   top: 0;
   z-index: 1;
 }
-/* line 33, ../../themes/sf-theme-default.sass */
+/* line 36, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-select span {
   color: #7f8b8d;
   font-size: 14px;
@@ -40,21 +44,21 @@
   top: 0;
   z-index: 0;
 }
-/* line 46, ../../themes/sf-theme-default.sass */
+/* line 49, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox, .sexyforms.sf-theme-default.sf-radio {
   background: white;
   border: 1px solid #cccccc;
   border-radius: 3px;
   color: #7f8b8d;
 }
-/* line 53, ../../themes/sf-theme-default.sass */
+/* line 56, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox.sf-checked:before, .sexyforms.sf-theme-default.sf-radio.sf-checked:before {
   left: 0;
   line-height: 0;
   position: absolute;
   top: 3px;
 }
-/* line 59, ../../themes/sf-theme-default.sass */
+/* line 62, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox input, .sexyforms.sf-theme-default.sf-radio input {
   left: 0;
   opacity: 0;
@@ -62,16 +66,16 @@
   top: 0;
   z-index: 1;
 }
-/* line 70, ../../themes/sf-theme-default.sass */
+/* line 73, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-checkbox.sf-checked:before {
   content: "\2714";
   font-size: 20px;
 }
-/* line 77, ../../themes/sf-theme-default.sass */
+/* line 80, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-radio {
   border-radius: 12px;
 }
-/* line 80, ../../themes/sf-theme-default.sass */
+/* line 83, ../../themes/sf-theme-default.sass */
 .sexyforms.sf-theme-default.sf-radio.sf-checked:before {
   content: "\2022";
   font-size: 30px;
