@@ -129,6 +129,9 @@ Opções do plugin
 			// Evento focus
 			$el.on( 'focus', this.elFocus );
 
+			// Evento blur (ao perder o foco)
+			$el.on( 'blur', this.elBlur );
+
 		}, // init
 
 
