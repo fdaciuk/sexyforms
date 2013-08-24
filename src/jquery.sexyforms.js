@@ -118,8 +118,16 @@ Opções do plugin
 			}
 
 
+
+
+
+			// Eventos
+
 			// Evento change
 			$el.on( 'change', functionExec );
+
+			// Evento focus
+			$el.on( 'focus', this.elFocus );
 
 		}, // init
 
@@ -346,7 +354,57 @@ Opções do plugin
 			console.log( 'File', $el );
 			$el.addClass( 'sf-file' );
 
-		} // fileChange
+		}, // fileChange
+
+
+
+
+
+
+
+
+
+
+		/*--------------------------------------------------------------------------------------
+		 *
+		 * @name: elFocus
+		 * @description: Quando o elemento recebe o foco
+		 *
+		 * @param {Object} e Dados do evento focus
+		 *
+		 *-------------------------------------------------------------------------------------*/
+		elFocus : function( e ) {
+
+			console.log( 'Focus' );
+			var $this = $( this );
+			$this.closest( '.sexyforms' ).addClass( 'sf-focus' );
+
+		}, // elFocus
+
+
+
+
+
+
+
+
+
+
+		/*--------------------------------------------------------------------------------------
+		 *
+		 * @name: elBlur
+		 * @description: Quando o elemento perde o foco
+		 *
+		 * @param {Object} e Dados do evento blur
+		 *
+		 *-------------------------------------------------------------------------------------*/
+		elBlur : function( e ) {
+
+			console.log( 'Blur' );
+			var $this = $( this );
+			$this.closest( '.sexyforms' ).removeClass( 'sf-focus' );
+
+		} // elBlur
 	};
 
 
