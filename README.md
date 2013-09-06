@@ -118,8 +118,10 @@ Padrão: `default`
 
 ## A Fazer (todo)
 
-> * Programar para input file
+> * Programar para input file - OK
 > * Tema default para input file
+> * Documentacão para fileText
+> * Documentar classe default-message do file
 > * Campos desabilitados, incluir a classe `sf-disabled`
 > * Método `sf_update()` para quando o campo de formulário for atualizado dinamicamente
 > * Método `sf_remove()` para remover o sexyforms

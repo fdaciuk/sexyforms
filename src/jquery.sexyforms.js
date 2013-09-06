@@ -24,7 +24,8 @@ Opções do plugin
 	defaults = {
 		setStyle : true, // float, margin, position, bottom, left, right, top, height, width
 		theme    : 'default', // default, false,
-		wrap     : 'div' // Elemento html que vai envolver os itens de formulário
+		wrap     : 'div', // Elemento html que vai envolver os itens de formulário
+		fileText : ''
 	};
 
 	// The actual plugin constructor
@@ -330,8 +331,8 @@ Opções do plugin
 		 *-------------------------------------------------------------------------------------*/
 		initFile : function( $ctn ) {
 
-			console.log( 'File', $ctn );
-			$ctn.addClass( 'sf-file' );
+			var tpl = $( '<span class="sf-name-file default-message"><b>' + this.settings.fileText + '</b></span>' );
+			$ctn.addClass( 'sf-file' ).append( tpl );
 
 		}, // initFile
 
@@ -349,13 +350,16 @@ Opções do plugin
 		 * @name: fileChange
 		 * @description: Quando o input file recebe o evento change
 		 *
-		 * @param {jQuery Object} $el Objeto jQuery do select
+		 * @param {jQuery Object} e Dados do evento change
 		 *
 		 *-------------------------------------------------------------------------------------*/
-		fileChange : function( $el ) {
+		fileChange : function( e ) {
 
-			console.log( 'File', $el );
-			$el.addClass( 'sf-file' );
+			var $this = $( this ),
+				val = $this.val();
+
+			val = val.split( /(\\|\/)/g ).pop();
+			$this.closest( '.sf-file' ).find( 'span.sf-name-file' ).removeClass( 'default-message' ).find( 'b' ).text( val );
 
 		}, // fileChange
 
