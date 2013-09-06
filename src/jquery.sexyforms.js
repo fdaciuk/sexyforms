@@ -331,7 +331,7 @@ Opções do plugin
 		 *-------------------------------------------------------------------------------------*/
 		initFile : function( $ctn ) {
 
-			var tpl = $( '<span class="sf-name-file default-message"><b>' + this.settings.fileText + '</b></span>' );
+			var tpl = $( '<span class="sf-name-file sf-default-message"><b>' + this.settings.fileText + '</b></span>' );
 			$ctn.addClass( 'sf-file' ).append( tpl );
 
 		}, // initFile
@@ -359,7 +359,7 @@ Opções do plugin
 				val = $this.val();
 
 			val = val.split( /(\\|\/)/g ).pop();
-			$this.closest( '.sf-file' ).find( 'span.sf-name-file' ).removeClass( 'default-message' ).find( 'b' ).text( val );
+			$this.closest( '.sf-file' ).find( 'span.sf-name-file' ).removeClass( 'sf-default-message' ).find( 'b' ).text( val );
 
 		}, // fileChange
 
