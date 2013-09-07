@@ -15,6 +15,7 @@ Opções do plugin
 - setStyle
 - theme
 - wrap
+- fileText
 */
 
 ;(function( window, document, $, undefined ) {
@@ -22,9 +23,13 @@ Opções do plugin
 	// Create the defaults once
 	var pluginName = 'sexyforms',
 	defaults = {
-		setStyle : true, // float, margin, position, bottom, left, right, top, height, width
-		theme    : 'default', // default, false,
-		wrap     : 'div', // Elemento html que vai envolver os itens de formulário
+		// float, margin, position, bottom, left, right, top, height, width
+		setStyle : true,
+		// default, false ou alguma string para receber a classe .sf-theme-{nome-do-tema}
+		theme    : 'default',
+		// Elemento html que vai envolver os itens de formulário
+		wrap     : 'div',
+		// Texto padrão do input:file
 		fileText : ''
 	};
 

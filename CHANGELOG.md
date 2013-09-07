@@ -1,6 +1,6 @@
 # Changelog Sexyforms
 
-* v0.1.0 - Set 06, 2013
+* v0.0.4 - Set 06, 2013
 	* Funcionalidade para input file
 
 * v0.0.3 - Ago 23, 2013
