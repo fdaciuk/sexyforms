@@ -4,7 +4,7 @@ Dê um belo estilo aos seus formulários com muita simplicidade e poder de perso
 
 Sexyforms é uma forma simples e poderosa para estilizar campos de formulário que são praticamente impossíveis de se fazer apenas com CSS (e manter o cross-browser).
 
-[Demonstração](http://fdaciuk.github.io/sexyforms)
+[Demonstração](https://rawgithub.com/fdaciuk/sexyforms/gh-pages/index.html)
 
 ## Instalação
 
@@ -20,13 +20,13 @@ Sexyforms é uma forma simples e poderosa para estilizar campos de formulário q
     ```html
     <script src="dist/jquery.sexyforms.min.js"></script>
     ```
-    
+
 
 ## Como usar
 
 Faça a chamada dos elementos que você quer que recebam a estilização:
 
-```javascript
+```js
 $( 'select, input:radio, input:checkbox, input:file' ).sexyforms();
 ```
 
@@ -65,7 +65,7 @@ Quando o campo está desabilitado, o wrapper recebe a classe `sf-disabled`.
 
 Para setar suas opções para o plugin, passe para a função um objeto Javascript:
 
-```javascript
+```js
 $( 'input:radio, input:checkbox, select, input:file' ).sexyforms({
     setStyle : false,
     theme : 'meu-tema'
@@ -92,7 +92,7 @@ Verifica se o plugin deve usar um tema ou não. Para não usar tema algum, passe
 
 Ex:
 
-```javascript
+```js
 $( 'input:radio, input:checkbox, select, input:file' ).sexyforms({
     theme : 'meu-tema'
 });
